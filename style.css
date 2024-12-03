@@ -18,14 +18,17 @@ header {
 
 header h1 {
     margin: 0;
+    font-size: 1.8rem; /* Ajuste para caber melhor em telas menores */
 }
 
+/* Menu de navegação */
 nav ul {
     padding: 0;
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap; /* Permite que o menu ajuste-se em telas menores */
 }
 
 nav ul li a {
@@ -40,6 +43,15 @@ main {
     text-align: center;
 }
 
+main img {
+    max-width: 100%; /* Imagens ajustam-se ao tamanho da tela */
+    height: auto;
+}
+
+main p, main h2, main h3 {
+    margin-bottom: 1rem;
+}
+
 /* Rodapé */
 footer {
     background: #333;
@@ -47,4 +59,23 @@ footer {
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        gap: 0.5rem; /* Diminui o espaçamento no menu em telas menores */
+    }
+
+    main {
+        padding: 1rem; /* Reduz o espaçamento para caber melhor */
+    }
+
+    footer {
+        font-size: 0.9rem; /* Texto menor no rodapé */
+    }
 }
